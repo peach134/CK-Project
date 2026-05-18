@@ -47,6 +47,15 @@
             <a class="button button--primary" href="#route">Начать маршрут</a>
             <a class="button button--ghost" href="#places">Где увидеть</a>
           </div>
+          <div class="hero-route" aria-label="7 остановок маршрута">
+            <span>01 Нефть</span>
+            <span>02 Барокко</span>
+            <span>03 Ковёр</span>
+            <span>04 Крапивин</span>
+            <span>05 Источники</span>
+            <span>06 Купечество</span>
+            <span>07 Наличники</span>
+          </div>
         </div>
       </section>
 
@@ -67,12 +76,14 @@
       <aside class="route-widget" aria-label="Прогресс маршрута">
         <img src="images/mahrik_без фона.png" alt="" />
         <div>
-          <span>Сейчас в маршруте</span>
+          <span>Прогресс</span>
           <strong id="current-section">Старт</strong>
+          <small id="route-count">0/7</small>
         </div>
       </aside>
 
       <div id="sections" class="sections"></div>
+      <div id="route-finish" class="route-finish"></div>
     </main>
 
     <footer class="footer">

@@ -7,6 +7,7 @@ const sections = [
     title: "Почему Тюмень — это не просто город, а «нефтяная столица»",
     subtitle: "Если коротко: без нефти Тюмень была бы совсем другой",
     motif: "oil",
+    accent: "route-industrial",
     intro: [
       "Привет, это снова я",
       "Сейчас объясню, почему в Тюмени деньги, дороги и большие здания",
@@ -58,6 +59,7 @@ const sections = [
     title: "Почему старые здания Тюмени выглядят так необычно",
     subtitle: "Если коротко: в Сибири тоже любили строить красиво",
     motif: "baroque",
+    accent: "route-ornament",
     intro: ["Сейчас будет немного архитектуры", "Но не пугайся — без скучных лекций"],
     explanation: [
       "Сибирское барокко — это стиль старых храмов и зданий с кучей деталей, узоров и украшений.",
@@ -95,6 +97,7 @@ const sections = [
     title: "Почему ковёр стал символом Тюмени",
     subtitle: "Да, тот самый ковёр с узорами",
     motif: "carpet",
+    accent: "route-pattern",
     intro: ["Наконец-то тема про меня"],
     explanation: [
       "Раньше такие ковры были почти в каждом доме.",
@@ -139,6 +142,7 @@ const sections = [
     title: "Почему в Тюмени так любят Крапивина",
     subtitle: "Его книги — отдельная атмосфера",
     motif: "krapivin",
+    accent: "route-book",
     intro: ["Сейчас будет немного вайба детства"],
     explanation: [
       "Крапивин писал книги про дружбу, приключения и свободу.",
@@ -181,6 +185,7 @@ const sections = [
     title: "Почему зимой всех так манят минеральные воды",
     subtitle: "Очень странная, но очень тюменская традиция",
     motif: "springs",
+    accent: "route-water",
     intro: ["Представь: на улице −25, а ты сидишь в горячем бассейне"],
     explanation: [
       "Термальные источники — это природная горячая вода из глубины земли.",
@@ -217,6 +222,7 @@ const sections = [
     title: "Почему старый центр выглядит так атмосферно",
     subtitle: "Всё благодаря купцам",
     motif: "merchants",
+    accent: "route-facade",
     intro: ["Когда-то Тюмень была серьёзным бизнес-городом"],
     explanation: [
       "Купцы — это предприниматели прошлого.",
@@ -252,6 +258,7 @@ const sections = [
     title: "Наличники — уютный код старой Тюмени",
     subtitle: "Самые красивые детали города иногда — прямо на окнах",
     motif: "nalichniki",
+    accent: "route-window",
     intro: ["Да, сейчас будет целый раздел про окна", "И это интереснее, чем кажется"],
     explanation: [
       "Наличники — это резные деревянные украшения вокруг окон.",
@@ -288,16 +295,6 @@ const sections = [
   },
 ];
 
-const motifStyles = {
-  oil: "repeating-linear-gradient(90deg, rgba(21,89,168,.18) 0 2px, transparent 2px 22px)",
-  baroque: "radial-gradient(circle at 20% 22%, rgba(21,89,168,.16) 0 3px, transparent 4px), repeating-linear-gradient(135deg, rgba(21,89,168,.12) 0 1px, transparent 1px 18px)",
-  carpet: "repeating-linear-gradient(45deg, rgba(21,89,168,.16) 0 10px, transparent 10px 20px), repeating-linear-gradient(-45deg, rgba(30,115,216,.1) 0 8px, transparent 8px 18px)",
-  krapivin: "linear-gradient(90deg, rgba(21,89,168,.12) 0 1px, transparent 1px), linear-gradient(0deg, rgba(21,89,168,.08) 0 1px, transparent 1px)",
-  springs: "radial-gradient(ellipse at 25% 80%, rgba(30,115,216,.16), transparent 38%), repeating-radial-gradient(circle at 70% 30%, rgba(21,89,168,.12) 0 2px, transparent 2px 16px)",
-  merchants: "linear-gradient(135deg, rgba(21,89,168,.16) 25%, transparent 25%), linear-gradient(225deg, rgba(21,89,168,.1) 25%, transparent 25%)",
-  nalichniki: "repeating-linear-gradient(90deg, rgba(21,89,168,.14) 0 4px, transparent 4px 18px), repeating-linear-gradient(0deg, rgba(21,89,168,.1) 0 4px, transparent 4px 18px)",
-};
-
 const sectionsRoot = document.querySelector("#sections");
 
 const paragraphList = (items) => items.map((item) => `<p>${item}</p>`).join("");
@@ -327,10 +324,15 @@ function renderQuiz(section) {
 
   return `
     <article class="block quiz" data-quiz="${section.id}">
-      <h3><span>07</span>Мини-интерактив</h3>
-      <p class="quiz__question">${section.quiz.question}</p>
-      <div class="quiz__options">
-        ${section.quiz.options.map((option) => `<button class="quiz__option" type="button">${option}</button>`).join("")}
+      <div class="quiz__layout">
+        <img src="${mahrikCutout}" alt="" />
+        <div>
+          <h3><span>07</span>Мини-интерактив</h3>
+          <p class="quiz__question">${section.quiz.question}</p>
+          <div class="quiz__options">
+            ${section.quiz.options.map((option) => `<button class="quiz__option" type="button">${option}</button>`).join("")}
+          </div>
+        </div>
       </div>
       <p class="quiz__answer" aria-live="polite"></p>
     </article>
@@ -342,16 +344,22 @@ function renderSection(section, index) {
   const commentNumber = section.quiz ? "08" : "07";
 
   return `
-    <section class="code-section reveal" id="${section.id}" data-title="${section.nav}" style="--section-accent: var(--blue-600); --motif: ${motifStyles[section.motif]}">
+    <section class="code-section code-section--${section.motif} reveal" id="${section.id}" data-title="${section.nav}" data-index="${index + 1}">
       <div class="section-rail">
-        <p class="section-kicker">Остановка ${number}</p>
+        <p class="section-kicker"><span>${number}</span>Остановка</p>
         <h2>${section.title}</h2>
         <p class="section-subtitle">${section.subtitle}</p>
-        <div class="section-motif" aria-hidden="true"></div>
+        <div class="section-motif ${section.accent}" aria-hidden="true">
+          <span class="motif-label">${section.nav}</span>
+          <i></i>
+          <b></b>
+        </div>
       </div>
 
+      <div class="route-spine" aria-hidden="true"><span></span></div>
+
       <div class="content-stack">
-        <article class="guide-note">
+        <article class="guide-note guide-note--intro">
           <img src="${mahrikCutout}" alt="" />
           <div>
             <p class="label">Вступление от Махрика</p>
@@ -389,7 +397,7 @@ function renderSection(section, index) {
         ${renderPlaces(section)}
         ${renderQuiz(section)}
 
-        <article class="guide-note">
+        <article class="guide-note guide-note--comment">
           <img src="${mahrikCutout}" alt="" />
           <div>
             <p class="label">${commentNumber}. Комментарий Махрика</p>
@@ -403,11 +411,25 @@ function renderSection(section, index) {
 
 sectionsRoot.innerHTML = sections.map(renderSection).join("");
 
+document.querySelector("#route-finish").innerHTML = `
+  <section class="finish-card reveal" aria-label="Финал маршрута">
+    <img src="${mahrikCutout}" alt="" />
+    <div>
+      <p class="label">Маршрут</p>
+      <h2>7 остановок культурного кода пройдены</h2>
+      <div class="finish-route">
+        ${sections.map((section, index) => `<a href="#${section.id}"><span>${String(index + 1).padStart(2, "0")}</span>${section.nav}</a>`).join("")}
+      </div>
+    </div>
+  </section>
+`;
+
 const progressBar = document.querySelector(".progress__bar");
 const currentSection = document.querySelector("#current-section");
+const routeCount = document.querySelector("#route-count");
 const navLinks = [...document.querySelectorAll(".topnav a")];
-const revealItems = [...document.querySelectorAll(".reveal")];
 const routeSections = [...document.querySelectorAll(".code-section")];
+const revealItems = [...document.querySelectorAll(".reveal")];
 
 function updateProgress() {
   const scrollable = document.documentElement.scrollHeight - window.innerHeight;
@@ -417,6 +439,8 @@ function updateProgress() {
 
 function setActiveSection(id, title) {
   currentSection.textContent = title;
+  const activeIndex = routeSections.findIndex((section) => section.id === id) + 1;
+  routeCount.textContent = activeIndex > 0 ? `${activeIndex}/7` : "0/7";
   navLinks.forEach((link) => link.classList.toggle("is-active", link.getAttribute("href") === `#${id}`));
 }
 
@@ -478,6 +502,8 @@ document.querySelectorAll("[data-quiz]").forEach((quizEl) => {
         item.disabled = false;
       });
       button.classList.add(isRight ? "is-right" : "is-wrong");
+      quizEl.classList.toggle("quiz--right", isRight);
+      quizEl.classList.toggle("quiz--wrong", !isRight);
       answerEl.textContent = isRight ? section.quiz.responseRight : section.quiz.responseWrong;
     });
   });
