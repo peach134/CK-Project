@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Культурный код Тюмени</title>
+    <meta
+      name="description"
+      content="Интерактивный лендинг-путешествие по культурному коду Тюмени с Махриком в роли гида."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="progress" aria-hidden="true">
+      <span class="progress__bar"></span>
+    </div>
+
+    <header class="topbar">
+      <a class="brand" href="#top" aria-label="К началу страницы">
+        <span class="brand__mark">ТМН</span>
+        <span>Культурный код</span>
+      </a>
+      <nav class="topnav" aria-label="Навигация по разделам">
+        <a href="#oil">Нефть</a>
+        <a href="#baroque">Барокко</a>
+        <a href="#carpet">Ковёр</a>
+        <a href="#krapivin">Крапивин</a>
+        <a href="#springs">Источники</a>
+        <a href="#merchants">Купечество</a>
+        <a href="#nalichniki">Наличники</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero__media" aria-hidden="true">
+          <img src="images/mahrik.png" alt="" />
+        </div>
+        <div class="hero__content">
+          <p class="eyebrow">Маршрут по символам города</p>
+          <h1 id="hero-title">Культурный код Тюмени</h1>
+          <p class="hero__lead">
+            Махрик проведёт тебя по семи тюменским смыслам: от нефти и старого центра до ковров,
+            источников и историй Крапивина.
+          </p>
+          <div class="hero__actions" aria-label="Быстрая навигация">
+            <a class="button button--primary" href="#route">Начать маршрут</a>
+            <a class="button button--ghost" href="#places">Где увидеть</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="intro-band" id="route" aria-label="Махрик начинает маршрут">
+        <div class="guide-card guide-card--wide reveal">
+          <img src="images/mahrik_без фона.png" alt="Махрик, барашик-гид ТюмГУ" />
+          <div>
+            <p class="label">Махрик на связи</p>
+            <h2>Я буду твоим гидом по культурному коду Тюмени</h2>
+            <p>
+              В каждом разделе есть простое объяснение, короткая история, факт-блок, места в городе
+              и моя реплика. Идём по порядку сценария.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <aside class="route-widget" aria-label="Прогресс маршрута">
+        <img src="images/mahrik_без фона.png" alt="" />
+        <div>
+          <span>Сейчас в маршруте</span>
+          <strong id="current-section">Старт</strong>
+        </div>
+      </aside>
+
+      <div id="sections" class="sections"></div>
+    </main>
+
+    <footer class="footer">
+      <p>Культурный код Тюмени</p>
+      <p>Сценарий сохранён по материалам <span>docs/scenario.md</span></p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
