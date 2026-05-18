@@ -1,4 +1,8 @@
 const mahrikCutout = "images/mahrik_без фона.png";
+const mahrikIntro = "images/mahrik_intro.png";
+const mahrikQuiz = "images/mahrik_quiz.png";
+const mahrikComment = "images/mahrik_comment.png";
+const mahrikFinish = "images/mahrik_finish.png";
 
 const sections = [
   {
@@ -325,7 +329,7 @@ function renderQuiz(section) {
   return `
     <article class="block quiz" data-quiz="${section.id}">
       <div class="quiz__layout">
-        <img src="${mahrikCutout}" alt="" />
+        <img src="${mahrikQuiz}" alt="" />
         <div>
           <h3><span>07</span>Мини-интерактив</h3>
           <p class="quiz__question">${section.quiz.question}</p>
@@ -360,7 +364,7 @@ function renderSection(section, index) {
 
       <div class="content-stack">
         <article class="guide-note guide-note--intro">
-          <img src="${mahrikCutout}" alt="" />
+          <img src="${mahrikIntro}" alt="" />
           <div>
             <p class="label">Вступление от Махрика</p>
             ${paragraphList(section.intro)}
@@ -398,7 +402,7 @@ function renderSection(section, index) {
         ${renderQuiz(section)}
 
         <article class="guide-note guide-note--comment">
-          <img src="${mahrikCutout}" alt="" />
+          <img src="${mahrikComment}" alt="" />
           <div>
             <p class="label">${commentNumber}. Комментарий Махрика</p>
             ${paragraphList(section.comment)}
@@ -413,7 +417,7 @@ sectionsRoot.innerHTML = sections.map(renderSection).join("");
 
 document.querySelector("#route-finish").innerHTML = `
   <section class="finish-card reveal" aria-label="Финал маршрута">
-    <img src="${mahrikCutout}" alt="" />
+    <img src="${mahrikFinish}" alt="" />
     <div>
       <p class="label">Маршрут</p>
       <h2>7 остановок культурного кода пройдены</h2>
