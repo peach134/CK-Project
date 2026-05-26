@@ -1,0 +1,427 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Культурный код Тюмени</title>
+    <meta
+      name="description"
+      content="HTML-референс сайта о культурном коде Тюмени с Махриком в роли гида."
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="progress" aria-hidden="true"><span class="progress__bar"></span></div>
+
+    <header class="site-header" id="top">
+      <a class="brand" href="#hero" aria-label="К началу страницы">
+        <span class="brand__mark">ТМН</span>
+        <span>Культурный код</span>
+      </a>
+      <nav class="main-nav" aria-label="Основная навигация">
+        <a href="#mahrik">Махрик</a>
+        <a href="#manifest">О проекте</a>
+        <a href="#showcase">Смыслы</a>
+        <a href="#carpet">Ковёр</a>
+        <a href="#krapivin">Крапивин</a>
+        <a href="#sources">Источники</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="hero" aria-labelledby="hero-title">
+        <div class="hero__image" aria-hidden="true"></div>
+        <div class="hero__overlay" aria-hidden="true"></div>
+        <div class="hero__inner">
+          <p class="eyebrow">Маршрут по символам города</p>
+          <h1 id="hero-title">Культурный код Тюмени</h1>
+          <p>
+            Вместе с нашим пушистым хранителем Махриком мы расшифруем для тебя смыслы
+            города. Ты узнаешь, почему сибирские ковры покорили Париж, где искать настоящую
+            нефть в историческом центре и как сибирское барокко стало круче любого
+            современного арта!
+          </p>
+          <a class="button button--red" href="#mahrik">Познакомиться с Махриком</a>
+        </div>
+      </section>
+
+      <section class="guide-intro section-pad" id="mahrik" aria-labelledby="mahrik-title">
+        <div class="guide-intro__media">
+          <img src="../images/mahrik/mahrik-happy.jpg" alt="Махрик, пушистый гид по Тюмени" />
+        </div>
+        <div class="guide-intro__text">
+          <p class="eyebrow">Знакомство с гидом</p>
+          <h2 id="mahrik-title">Привет, я Махрик!</h2>
+          <p class="lead">Воплощение тюменского ковра, хранитель тепла и друг каждого студента.</p>
+          <p>
+            Я родился на старинной ферме под Тюменью, где из поколения в поколение выращивали
+            овечек с самой мягкой шерстью для местных мануфактур. Мой прадедушка очень
+            гордился тем, что его шерсть попала на ковер, который в 1900 году отправился на
+            Всемирную выставку в Париж и взял там Гран-при!
+          </p>
+          <p>
+            Сам я всегда был слишком любознательным для обычного барашка. Вместо того чтобы
+            просто щипать траву, я часами слушал истории старых мастеров о сибирском барокко,
+            уникальной тюменской резьбе и о том, как наш город стал «Вратами Сибири».
+          </p>
+          <p>
+            Когда я подрос, то понял: моё предназначение — не просто согревать, а делиться
+            знаниями о родном крае. Поэтому я перебрался в Тюмень и поступил в ТюмГУ, чтобы
+            помогать таким же новичкам, как я сам, быстрее адаптироваться и почувствовать себя
+            здесь как дома.
+          </p>
+        </div>
+      </section>
+
+      <section class="manifest section-pad" id="manifest" aria-labelledby="manifest-title">
+        <div class="manifest__inner">
+          <p class="eyebrow">Манифест проекта</p>
+          <h2 id="manifest-title">О тюменском культурном коде</h2>
+          <p>
+            Тюмень — это не только учебные пары, зачеты в общежитиях и прогулки по
+            набережной. У нашего города есть глубокий, сильный характер, который не всегда
+            заметен с первого взгляда.
+          </p>
+          <p>
+            Черное золото, купеческие династии, культовые книги Владислава Крапивина,
+            согревающие горячие источники, сибирское барокко и махровые ковры — всё это
+            переплетается в единый узор. Именно эти смыслы делают Тюмень особенной. Давай
+            разберем их вместе.
+          </p>
+        </div>
+      </section>
+
+      <section class="showcase section-pad" id="showcase" aria-labelledby="showcase-title">
+        <div class="section-heading">
+          <p class="eyebrow">Интерактивная витрина смыслов</p>
+          <h2 id="showcase-title">6 ключевых тем</h2>
+        </div>
+
+        <div class="meaning-grid" aria-label="Темы культурного кода">
+          <article class="meaning-card meaning-card--carpet">
+            <div class="meaning-card__visual" aria-hidden="true"></div>
+            <h3>Махровый ковер</h3>
+            <p>
+              Как сибирское ремесло согревало путешественников на тракте и завоевало признание
+              искушенных парижан.
+            </p>
+            <a href="#carpet">Читать историю</a>
+          </article>
+
+          <article class="meaning-card meaning-card--oil">
+            <div class="meaning-card__visual" aria-hidden="true"></div>
+            <h3>Нефтяное сердце</h3>
+            <p>
+              История великих открытий XX века: как Тюмень превратилась из «столицы деревень» в
+              главный нефтегазовый центр страны.
+            </p>
+            <a href="#meaning-oil">Узнать больше</a>
+          </article>
+
+          <article class="meaning-card meaning-card--merchants">
+            <div class="meaning-card__visual" aria-hidden="true"></div>
+            <h3>Тюменское купечество</h3>
+            <p>
+              О сибирских меценатах, которые строили театры, школы и больницы, закладывая
+              фундамент будущего города.
+            </p>
+            <a href="#meaning-merchants">Узнать больше</a>
+          </article>
+
+          <article class="meaning-card meaning-card--window">
+            <div class="meaning-card__visual" aria-hidden="true"></div>
+            <h3>Уникальные наличники</h3>
+            <p>
+              Секреты деревянного зодчества и сибирского барокко. Читаем символы на фасадах
+              старинных домов.
+            </p>
+            <a href="#meaning-window">Узнать больше</a>
+          </article>
+
+          <article class="meaning-card meaning-card--springs">
+            <div class="meaning-card__visual" aria-hidden="true"></div>
+            <h3>Горячие источники</h3>
+            <p>
+              Подземные термальные моря Тюмени — геологический феномен, ставший главной
+              визитной карточкой региона.
+            </p>
+            <a href="#meaning-springs">Узнать больше</a>
+          </article>
+
+          <article class="meaning-card meaning-card--krapivin">
+            <div class="meaning-card__visual" aria-hidden="true"></div>
+            <h3>Миры Владислава Крапивина</h3>
+            <p>
+              Символы детства, зовущие барабаны, старая Тюмень и летящие парусники в творчестве
+              легендарного писателя.
+            </p>
+            <a href="#krapivin">Читать историю</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="mini-meanings" id="compact-meanings" aria-label="Короткие тезисы витрины">
+        <div class="mini-meanings__grid">
+          <article id="meaning-oil">
+            <span>01</span>
+            <h3>Нефтяное сердце</h3>
+            <p>
+              История великих открытий XX века: как Тюмень превратилась из «столицы деревень» в
+              главный нефтегазовый центр страны.
+            </p>
+          </article>
+          <article id="meaning-merchants">
+            <span>02</span>
+            <h3>Тюменское купечество</h3>
+            <p>
+              О сибирских меценатах, которые строили театры, школы и больницы, закладывая
+              фундамент будущего города.
+            </p>
+          </article>
+          <article id="meaning-window">
+            <span>03</span>
+            <h3>Уникальные наличники</h3>
+            <p>
+              Секреты деревянного зодчества и сибирского барокко. Читаем символы на фасадах
+              старинных домов.
+            </p>
+          </article>
+          <article id="meaning-springs">
+            <span>04</span>
+            <h3>Горячие источники</h3>
+            <p>
+              Подземные термальные моря Тюмени — геологический феномен, ставший главной
+              визитной карточкой региона.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="topic-hero topic-hero--carpet" id="carpet" aria-labelledby="carpet-title">
+        <div>
+          <p class="eyebrow">Раздел</p>
+          <h2 id="carpet-title">Тюменский махровый ковер</h2>
+          <a class="button" href="#carpet-intro">Узнать историю</a>
+        </div>
+      </section>
+
+      <section class="split-block section-pad" id="carpet-intro">
+        <div class="split-block__image split-block__image--carpet" aria-hidden="true"></div>
+        <div class="split-block__content">
+          <p class="eyebrow">Вступление от Махрика</p>
+          <h2>Почему ковёр стал символом города?</h2>
+          <p>Когда-то такие ковры были почти в каждом доме.</p>
+          <p>Их делали вручную, долго и очень аккуратно.</p>
+          <p>
+            Со временем тюменский ковёр стал не просто предметом интерьера, а частью культурного
+            образа города.
+          </p>
+        </div>
+      </section>
+
+      <section class="story-block section-pad" aria-labelledby="carpet-history-title">
+        <div class="story-block__text">
+          <p class="eyebrow">История ковра</p>
+          <h2 id="carpet-history-title">От промысла до локального культурного кода Тюмени</h2>
+          <p>
+            Тюменский махровый ковер - народный художественный промысел региона. Ковер
+            объединяет в себе традицию, культуру и историю Сибири.
+          </p>
+          <p>
+            Тюменский махровый ковер получил наивысшую награду на Всемирной выставке в Париже в
+            1900 году. Великие художники восхищались традиционным промыслом Сибири и
+            увековечивали его в своих картинах. Так, на картине В. И. Сурикова «Взятие снежного
+            городка» одно из центральных мест занимает наш тюменский ковер.
+          </p>
+        </div>
+        <div class="story-block__media">
+          <img src="../images/carpet/carpet-full-2.jpg" alt="Тюменский махровый ковёр" />
+          <span>Ткань, цветы и орнаменты</span>
+        </div>
+      </section>
+
+      <section class="facts section-pad" aria-labelledby="carpet-facts-title">
+        <div class="section-heading">
+          <p class="eyebrow">Факт-блок</p>
+          <h2 id="carpet-facts-title">Интересные факты</h2>
+        </div>
+        <div class="fact-grid fact-grid--carpet">
+          <article>
+            <span>01</span>
+            <p>тюменский махровый ковер имеет свой уникальный стиль и технологию изготовления</p>
+          </article>
+          <article>
+            <span>02</span>
+            <p><strong>Черный фон</strong> - плодородная сибирская земля</p>
+          </article>
+          <article>
+            <span>03</span>
+            <p><strong>Яркие цветы</strong> - символ процветания этой земли</p>
+          </article>
+          <article>
+            <span>04</span>
+            <p>ковры создаются вручную</p>
+          </article>
+          <article>
+            <span>05</span>
+            <p>ковровому промыслу более 300 лет</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="places section-pad" aria-labelledby="carpet-places-title">
+        <div class="section-heading">
+          <p class="eyebrow">Карта смыслов</p>
+          <h2 id="carpet-places-title">Где это увидеть</h2>
+        </div>
+        <div class="place-grid">
+          <article>
+            <h3>Музейный комплекс имени И. Я. Словцова</h3>
+            <p>Место, где можно увидеть тюменские ковры и узнать историю местного ремесла.</p>
+          </article>
+          <article>
+            <h3>Архитектурные сооружения Улица Красина, 10</h3>
+            <p>традиционные тюменские узоры встречаются и на фасадах зданий</p>
+          </article>
+          <article>
+            <h3>Сувенирные магазины</h3>
+            <p>Здесь можно найти современные версии тюменских ковров и предметы с местной символикой.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="mahrik-comment mahrik-comment--carpet">
+        <img src="../images/mahrik/mahrik-happy.jpg" alt="" />
+        <div>
+          <p class="eyebrow">Финальный комментарий Махрика</p>
+          <h2>Да, я ведь тоже ковёр!</h2>
+        </div>
+      </section>
+
+      <section class="topic-hero topic-hero--krapivin" id="krapivin" aria-labelledby="krapivin-title">
+        <div>
+          <p class="eyebrow">Раздел</p>
+          <h2 id="krapivin-title">Миры Владислава Крапивина</h2>
+          <p>Истории о дружбе, свободе и детстве, на которых выросло несколько поколений.</p>
+          <a class="button" href="#krapivin-intro">Начать путешествие</a>
+        </div>
+      </section>
+
+      <section class="split-block split-block--reverse section-pad" id="krapivin-intro">
+        <div class="split-block__image split-block__image--mahrik-book">
+          <img
+            src="../images/mahrik/mahrik-books-boat.jpg"
+            alt="Махрик с книгой и бумажным корабликом"
+          />
+        </div>
+        <div class="split-block__content">
+          <p class="eyebrow">Вступление от Махрика</p>
+          <h2>Сейчас будет немного вайба детства</h2>
+          <p>
+            Владислав Крапивин — писатель, журналист и педагог, чьи книги стали частью детства
+            для тысяч людей.
+          </p>
+          <p>
+            В его историях много свободы, приключений, дружбы и ощущения, что впереди ещё целая
+            жизнь.
+          </p>
+          <p>
+            Для Тюмени Крапивин — это не просто автор книг, а важная часть культурной атмосферы
+            города.
+          </p>
+        </div>
+      </section>
+
+      <section class="atmosphere section-pad" aria-labelledby="atmosphere-title">
+        <div>
+          <p class="eyebrow">Почему это важно для Тюмени</p>
+          <h2 id="atmosphere-title">Крапивин — это атмосфера города</h2>
+          <p>Крапивин — это не просто «писатель из школьной программы».</p>
+          <p>Это часть атмосферы города и воспоминаний многих людей.</p>
+          <p>Некоторые города запоминаются зданиями. Тюмень — ещё и историями</p>
+        </div>
+      </section>
+
+      <section class="facts section-pad" aria-labelledby="krapivin-facts-title">
+        <div class="section-heading">
+          <p class="eyebrow">Интерактивная витрина смыслов</p>
+          <h2 id="krapivin-facts-title">Интересные факты</h2>
+        </div>
+        <div class="book-facts">
+          <article>
+            <img src="../images/krapivin/krapivin-portrait.jpg" alt="Владислав Крапивин" />
+            <p>книги Крапивина известны по всей России</p>
+          </article>
+          <article>
+            <img src="../images/krapivin/ship-illustration.jpg" alt="Иллюстрация с кораблём" />
+            <p>многие произведения связаны с темой свободы</p>
+          </article>
+          <article>
+            <img src="../images/krapivin/shadow-caravel-cover.jpg" alt="Обложка книги" />
+            <p>книги Крапивина известны по всей России</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="places places--krapivin section-pad" aria-labelledby="krapivin-places-title">
+        <div class="section-heading">
+          <p class="eyebrow">Карта смыслов</p>
+          <h2 id="krapivin-places-title">Где это увидеть</h2>
+        </div>
+        <div class="place-grid">
+          <article>
+            <h3>Центральная детская библиотека им. В.П. Крапивина</h3>
+            <p>Место, посвящённое творчеству писателя и литературной культуре города.</p>
+          </article>
+          <article>
+            <h3>Сквер Владислава Крапивина</h3>
+            <p>Место, которое идеально подходит под атмосферу книг Крапивина.</p>
+          </article>
+          <article>
+            <h3>Централизованная городская библиотечная система</h3>
+            <p>
+              Фестивали, выставки и события, посвящённые детской литературе и творчеству писателя.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="finish section-pad" aria-labelledby="finish-title">
+        <img src="../images/mahrik/mahrik-happy.jpg" alt="" />
+        <div>
+          <p class="eyebrow">Вывод</p>
+          <h2 id="finish-title">Культурный код складывается в единый узор</h2>
+          <p>
+            Черное золото, купеческие династии, культовые книги Владислава Крапивина,
+            согревающие горячие источники, сибирское барокко и махровые ковры — всё это
+            переплетается в единый узор.
+          </p>
+          <a class="button" href="#hero">Вернуться наверх</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer" id="sources">
+      <div>
+        <h2>Источники и материалы</h2>
+        <ul>
+          <li><a href="../docs/new-scenario.md">Сценарий проекта</a></li>
+          <li><a href="../docs/site-checklist.docx">Чек-лист требований к сайту</a></li>
+          <li>Локальные изображения Махрика: папка <span>images/mahrik</span></li>
+          <li>Локальные изображения ковра: папка <span>images/carpet</span></li>
+          <li>Локальные изображения Крапивина: папка <span>images/krapivin</span></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Учебный проект</h2>
+        <p>
+          HTML-референс для проектной работы и дальнейшего переноса в Tilda. Все переходы ведут
+          на реальные разделы этой страницы.
+        </p>
+        <a class="footer__top" href="#hero">Наверх</a>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
